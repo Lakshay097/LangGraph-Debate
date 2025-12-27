@@ -1,0 +1,30 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	UserInputNode(UserInputNode)
+	RoundsControllerNode(RoundsControllerNode)
+	AgentA(AgentA)
+	AgentB(AgentB)
+	TurnLogger(TurnLogger)
+	MemoryNode(MemoryNode)
+	JudgeNode(JudgeNode)
+	FinalLogger(FinalLogger)
+	__end__([<p>__end__</p>]):::last
+	AgentA --> TurnLogger;
+	AgentB --> TurnLogger;
+	JudgeNode --> FinalLogger;
+	MemoryNode --> RoundsControllerNode;
+	RoundsControllerNode -.-> AgentA;
+	RoundsControllerNode -.-> AgentB;
+	RoundsControllerNode -.-> JudgeNode;
+	TurnLogger --> MemoryNode;
+	UserInputNode --> RoundsControllerNode;
+	__start__ --> UserInputNode;
+	FinalLogger --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

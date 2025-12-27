@@ -1,0 +1,7 @@
+personas:
+  agent_a:
+    name: "Scientist"
+    prompt_path: "personas/scientist_prompt.txt"
+  agent_b:
+    name: "Philosopher"
+    prompt_path: "personas/philosopher_prompt.txt"
