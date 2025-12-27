@@ -1,0 +1,20 @@
+# Python cache / compiled
+__pycache__/
+*.py[cod]
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+
+# Logs (keep only one sample if needed)
+logs/*.jsonl
+
+# IDE / OS cruft
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
